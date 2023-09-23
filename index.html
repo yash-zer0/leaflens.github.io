@@ -55,17 +55,18 @@
 
 
 
-<div class="container-fluid d-flex justify-content-center align-items-center vh-100 bg" id="a">
+<div class="container-fluid d-flex justify-content-center align-items-center vh-110 bg" id="a">
   <div class="row mt-5">
-      
-      <div class="animation-container p-0 col-md-6 text-center">
-          <h2 class="mt-5 mb-4" style="white-space: nowrap;">UPLOAD YOUR IMAGE HERE</h2>
-          <input type="file" class="mb-4" accept="image/*" onchange="previewImage(event)">
-          <img id="preview" class="mb-5" alt="Preview Image">
-      </div>
+    <div class="animation-container p-0 col-md-6 text-center flex-row">
+      <h2 class="mt-5 mb-4" style="white-space: nowrap;">UPLOAD YOUR IMAGE HERE</h2>
+      <form id="imageForm" action="your_ml_model_endpoint" method="post" enctype="multipart/form-data">
+        <input type="file" class="mb-4" accept="image/*" onchange="previewImage(event)">
+        <img id="preview" class="mb-5" alt="Preview Image">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
   </div>
 </div>
-
 
 
 
